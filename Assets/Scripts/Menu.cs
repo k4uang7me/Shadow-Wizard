@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    [SerializeField] private GameObject painelmenuinicial;
+    [SerializeField] private GameObject painelopcoes;
+
     public void PlayGame()
     {
         SceneManager.LoadScene("Cutscene");
@@ -28,5 +31,18 @@ public class Menu : MonoBehaviour
     public void iniciar()
     {
         SceneManager.LoadScene("Menu");
+    }
+
+    public void Abrirconfg()
+    {
+        painelmenuinicial.SetActive(false);
+        painelopcoes.SetActive(true);
+    }
+
+        public void Fecharconfg()
+    { 
+        painelopcoes.SetActive(false);
+        painelmenuinicial.SetActive(true);
+        
     }
 }
