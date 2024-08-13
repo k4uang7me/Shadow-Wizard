@@ -60,10 +60,10 @@ public class Player2 : MonoBehaviour
         
 
         //Pular
-        if(Input.GetKeyDown(KeyCode.Space) && !isJumping)
+        if(Input.GetKeyDown(KeyCode.Space))
         {
             rb.AddForce(transform.up * forcaPulo,ForceMode2D.Impulse);
-            isJumping = true;
+  
         }
         
     }
